@@ -7,7 +7,7 @@ This proyect uses node on the backend and react on the frontend.
 
 ### Online Demo
 
-This app is hosted by heoku
+This app is hosted by heroku
 
 [Todo App](https://stark-forest-57260.herokuapp.com/)
 
