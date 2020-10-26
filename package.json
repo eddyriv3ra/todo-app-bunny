@@ -7,7 +7,8 @@
     "start": "node server",
     "server": "nodemon server",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "post-build": "npm install --prefix clientv && npm run build --prefix client"
   },
   "author": "Eddy Rivera",
   "license": "ISC",
