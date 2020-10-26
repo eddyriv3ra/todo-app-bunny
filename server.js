@@ -12,6 +12,6 @@ app.get('/', (req, res) => res.send('API Runinng'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/tasks', require('./routes/api/tasks'));
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

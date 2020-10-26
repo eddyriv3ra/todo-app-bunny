@@ -9,14 +9,15 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
-  "proxy": "http://localhost:5000",
   "author": "Eddy Rivera",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
     "config": "^3.3.2",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
-    "mongoose": "^5.10.9"
+    "mongoose": "^5.10.9",
+    "react-query": "^2.25.2"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
