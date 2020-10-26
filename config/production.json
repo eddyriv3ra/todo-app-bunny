@@ -1,0 +1,3 @@
+{
+	"mongoURI": "mongodb+srv://eddy:Annie115@cluster0.4ufew.mongodb.net/bunny-app?retryWrites=true&w=majority"
+}
