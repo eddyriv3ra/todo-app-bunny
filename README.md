@@ -5,6 +5,12 @@ This project was bootstrapped with
 
 This proyect uses node on the backend and react on the frontend.
 
+### Online Demo
+
+This app is hosted by heoku
+
+[Todo App](https://stark-forest-57260.herokuapp.com/)
+
 ### Installation
 
 To install the application follow the steps below in the console, you need to
