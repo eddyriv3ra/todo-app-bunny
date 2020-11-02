@@ -2,13 +2,14 @@ import { useContext, useState } from 'react';
 import { TaskContext } from '../../context/tasks.context';
 import useDeleteUser from '../../hooks/useDeleteUser';
 import useUpdateUser from '../../hooks/useUpdateUser';
+import useClickOutside from '../../hooks/useClickOutside';
 import styles from './User.module.scss';
 
 const User = ({ user }) => {
+  const { visible, setVisible, ref } = useClickOutside();
   const { selectedUserId, setSelectedUserId } = useContext(TaskContext);
   const [deleteUser] = useDeleteUser();
   const [updateUser] = useUpdateUser();
-  const [updateName, setUpdateName] = useState(false);
   const [value, setValue] = useState(user.name);
 
   const onClick = () => {
@@ -20,7 +21,7 @@ const User = ({ user }) => {
   };
 
   const handleUpdate = () => {
-    setUpdateName((value) => !value);
+    setVisible(!visible);
   };
 
   const onChange = (e) => {
@@ -32,7 +33,7 @@ const User = ({ user }) => {
       const user_id = user._id;
       const name = value;
       updateUser({ user_id, name });
-      setUpdateName(false);
+      setVisible(false);
     }
   };
 
@@ -43,13 +44,15 @@ const User = ({ user }) => {
 
   return (
     <div className={userStyle} onClick={onClick}>
-      {updateName ? (
+      {visible ? (
         <input
           type="text"
           name="name"
           value={value}
           onChange={onChange}
           onKeyDown={onEnter}
+          style={{ textAlign: 'initial' }}
+          ref={ref}
         />
       ) : (
         user.name
